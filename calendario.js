@@ -48,6 +48,16 @@ function generateCalendar(year,month) {
         calendarElement.appendChild(dayDiv);
     }
 
+    if(selectDate) {
+        const selectedDay = selectedDate.getDate();
+        const selectedMonth = selectedDate.getMonth();
+        const selectedYear = selectedDate.getFullYear();
+        if (selectedMonth === month && selectedYear === year) {
+            const days = document.querySelectorAll('.day');
+            days[selectedDay - 1].classList.add('selected');
+        }
+    }
+
 
 }
 
@@ -64,6 +74,8 @@ function selectDate(event, day) {
 
     dateInput.value = selectedDate.toLocaleDateString();
     bookingForm.classList.remove('hidden');
+
+    
 }
 
 document.getElementById('reserveForm').addEventListener('submit', function (event) {
