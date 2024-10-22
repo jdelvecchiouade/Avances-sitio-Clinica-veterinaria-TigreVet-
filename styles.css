@@ -58,25 +58,15 @@ section {
 }
 
 section h2 {
-  font-family: "Montserrat", sans-serif;
   color: #2e8b57;
   margin-bottom: 15px;
   font-size: 1.8em;
 }
 
 section h3 {
-  font-family: "Montserrat", sans-serif;
-  color: #527D65;
+  color: #388e3c;
   margin-bottom: 10px;
   font-size: 1.5em;
-}
-
-section h4 {
-  font-family: "Montserrat", sans-serif;
-  color: #AB7184;
-  margin-bottom: 10px;
-  font-size: 1.5em;
-  font-weight: 600;
 }
 
 section p,
@@ -129,51 +119,4 @@ footer {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contenedor-horizontal {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.color {
-  width: 160px;
-  height: 160px;
-  border-radius: 10%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.color p{
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  margin-bottom: 0px;
-}
-
-#verde-principal {
-  background-color: #2e8b57;
-}
-
-#blanco {
-  background-color: #ffffff;
-}
-
-#negro {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-#rosa-fuerte {
-  background-color: #fc286e;
-}
-
-#rosa-claro {
-  background-color: #ab7184;
-}
-
-#verde-secundario {
-  background-color: #527d65;
 }
