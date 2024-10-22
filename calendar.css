@@ -208,3 +208,8 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
 }
+
+.selected {
+    background-color: #cffeda;  
+    transform: scale(1.05); 
+}

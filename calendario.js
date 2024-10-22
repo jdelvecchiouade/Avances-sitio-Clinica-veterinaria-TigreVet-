@@ -4,14 +4,30 @@ const dateInput = document.getElementById('date');
 const confirmationMessage = document.getElementById('confirmation');
 
 let selectedDate = null; // Variable para almacenar la fecha seleccionada
+const currentDate = new Date();
+let actualMonth = currentDate.getMonth();
+let actualYear = currentDate.getFullYear();
 
-function generateCalendar() {
+function removeAllSelected() {
+    const selectedElements = document.querySelector('.selected');
+    if (selectedElements) {
+        selectedElements.classList.remove('selected');
+    }
+}
+
+
+function generateCalendar(year,month) {
     const currentDate = new Date();
-    const month = currentDate.getMonth();
-    const year = currentDate.getFullYear();
-    
+    if (year === undefined) {
+        year = currentDate.getFullYear();
+    }
+    if (month === undefined) {
+        month = currentDate.getMonth();  
+    }
+    const monthString = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    const nameMonth = monthString[month];
+        document.getElementById('month-year').textContent = nameMonth + ' ' + year;
     const lastDay = new Date(year, month + 1, 0);
-    
     for (let i = 1; i <= lastDay.getDate(); i++) {
         const dayDiv = document.createElement('div');
         dayDiv.classList.add('day');
@@ -26,18 +42,25 @@ function generateCalendar() {
             dayDiv.style.textDecoration = 'line-through'; // Tachado
             dayDiv.style.color = '#aaa'; // Color gris para los días pasados
         } else {
-            dayDiv.addEventListener('click', () => selectDate(i));
+            dayDiv.addEventListener('click', (event) => selectDate(event,i));
         }
 
         calendarElement.appendChild(dayDiv);
     }
+
+
 }
 
-function selectDate(day) {
+function selectDate(event, day) {
     const currentDate = new Date();
     const month = currentDate.getMonth();
     const year = currentDate.getFullYear();
     selectedDate = new Date(year, month, day); // Almacenar la fecha seleccionada
+
+    removeAllSelected();
+
+    // Cambiar el color de fondo del elemento seleccionado
+    event.target.classList.add('selected');
 
     dateInput.value = selectedDate.toLocaleDateString();
     bookingForm.classList.remove('hidden');
@@ -59,5 +82,30 @@ document.getElementById('reserveForm').addEventListener('submit', function (even
     bookingForm.classList.add('hidden'); // Ocultar el formulario
 });
 
-// Generar el calendario al cargar la página
-generateCalendar();
+document.getElementById('prev-month').addEventListener('click', function () {
+    calendarElement.innerHTML = '';
+    // Calcular el mes y año anterior
+    if (actualMonth === 0) {
+        actualMonth = 11;
+        actualYear -= 1;
+    } else {
+        actualMonth -= 1;
+    }
+    generateCalendar(actualYear, actualMonth);
+   
+});
+
+document.getElementById('next-month').addEventListener('click', function () {
+    calendarElement.innerHTML = '';
+     // Calcular el mes y año anterior
+     if (actualMonth === 11) {
+        actualMonth = 0;
+        actualYear += 1;
+    } else {
+        actualMonth += 1;
+    }
+    generateCalendar(actualYear, actualMonth);
+}
+);
+
+generateCalendar(actualYear, actualMonth); // Generar el calendario del mes actual
