@@ -25,6 +25,10 @@ header .logo h1 {
 
 nav ul {
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 60px;
 }
 
 nav ul li {
@@ -58,15 +62,82 @@ section {
 }
 
 section h2 {
+  font-family: "Montserrat", sans-serif;
   color: #2e8b57;
   margin-bottom: 15px;
   font-size: 1.8em;
 }
 
 section h3 {
-  color: #388e3c;
+  font-family: "Montserrat", sans-serif;
+  color: #527D65;
   margin-bottom: 10px;
   font-size: 1.5em;
+}
+
+section h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #AB7184;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.contenedor-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.color {
+  width: 160px;
+  height: 160px;
+  border-radius: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.color p{
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.contenedor-boton {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #2e8b57 ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-boton p {
+margin-bottom: 0px;
+font-weight: 600;
+color: #ffffff;
+}
+
+#verde-principal {
+  background-color: #2e8b57;
+}
+#blanco {
+  background-color: #ffffff;
+}
+#negro {
+  background-color: #000000;
+  color: #ffffff;
+}
+#rosa-fuerte {
+  background-color: #fc286e;
+}
+#rosa-claro {
+  background-color: #ab7184;
+}
+#verde-secundario {
+  background-color: #527d65;
 }
 
 section p,
@@ -85,7 +156,10 @@ section ul li {
   text-decoration: none;
   font-weight: 500;
 }
+a{
+  text-decoration: none;
 
+}
 .enlaces a:hover {
   text-decoration: underline;
 }
