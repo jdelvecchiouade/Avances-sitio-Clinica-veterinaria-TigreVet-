@@ -23,17 +23,31 @@ header .logo h1 {
   font-size: 2em;
 }
 
+.contenedor-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+nav {
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+  justify-content:space-between ;
+  margin: 0 auto;
+}
+
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 60px;
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 0 15px;
+  margin-left: 25px;
+
 }
 
 nav ul li a {
@@ -50,7 +64,6 @@ nav ul li a:hover {
 main {
   max-width: 1200px;
   margin: 40px auto;
-  padding: 0 20px;
 }
 
 section {
@@ -169,7 +182,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 15px 0;
-  position: fixed;
   width: 100%;
   bottom: 0;
 }
