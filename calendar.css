@@ -193,3 +193,29 @@ button:hover {
     background-color: #cffeda;  
     transform: scale(1.05); 
 }
+
+.default-option {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.time-slot {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+}
+
+.time-slot:hover {
+  background-color: #e0e0e0;
+}
+
+.time-slot.reserved {
+  background-color: #ffcccc;
+  cursor: not-allowed;
+  text-decoration: line-through;
+  color: #aaa;
+}
+

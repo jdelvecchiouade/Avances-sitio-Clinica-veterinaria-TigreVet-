@@ -9,8 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./menu.css" />
   <link rel="icon" href="images/logo-verde-principal.png" type="image/x-icon">
+  
 
 </head>
 
@@ -23,7 +25,12 @@
           <h1>TigreVet</h1>
         </div>
       </div>
-      <ul>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="citas.html">Turnos</a></li>
@@ -166,9 +173,14 @@
       <h3>Prototipado Funcional</h3>
       <p>
         Creamos un prototipo utilizando Figma para visualizar la estructura y
-        funcionalidad del sitio web. 
+        funcionalidad del sitio web.
       </p>
-      <a href="https://www.figma.com/design/DOfFuv4aYaoM73bBNm55AI/TigreVet---Proyecto?node-id=0-1&t=0nV9ZjXC5xvE3MQp-1" target="_blank"><div class="contenedor-boton"> <p>Figma</p> </div></a>
+      <a href="https://www.figma.com/design/DOfFuv4aYaoM73bBNm55AI/TigreVet---Proyecto?node-id=0-1&t=0nV9ZjXC5xvE3MQp-1"
+        target="_blank">
+        <div class="contenedor-boton">
+          <p>Figma</p>
+        </div>
+      </a>
     </section>
 
     <section class="roles">
@@ -200,6 +212,8 @@
   <footer>
     <p>TigreVet - Todos los derechos reservados © 2024</p>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./inicio.js"></script>
 </body>
 
 </html>

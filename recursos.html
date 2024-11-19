@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avances - TigreVet</title>
     <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./menu.css" />
     <style>
         .seccion {
             display: flex;
@@ -32,7 +33,12 @@
             <h1>TigreVet</h1>
           </div>
         </div>
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="citas.html">Turnos</a></li>
@@ -86,5 +92,7 @@
     <footer>
       <p>TigreVet - Todos los derechos reservados © 2024</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./inicio.js"></script>
   </body>
 </html>
